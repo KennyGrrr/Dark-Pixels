@@ -18,6 +18,7 @@ public class IronSword extends Actor
     {
         // Add your action code here.
         imageSetter();
+        //the if statement following this comment removes the iron sword after 2 refreshes
         if(pause>0)
         {
            pause--;
@@ -29,6 +30,7 @@ public class IronSword extends Actor
     }
     public void imageSetter()
     {
+        //gets the direction from the stab() function in the character class and sets the image that coresponds to it
         if(direction == 1)
         {
             setImage("IronSword_U.png");
@@ -48,6 +50,7 @@ public class IronSword extends Actor
     }
     public void setDirection(int d)
     {
+        //allows the direction to be set in character class
         direction = d;
     }
 }

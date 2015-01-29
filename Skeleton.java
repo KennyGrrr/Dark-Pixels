@@ -18,9 +18,12 @@ public class Skeleton extends Actor
         // Add your action code here.
         randomMovement();
         death();
+        //kill();
+        //kill will give an error when death occurs
     }    
     public void randomMovement()
     {
+        //Poorly executed random movement function
         int i = 0;
         if( Greenfoot.getRandomNumber(50) == 0)
         {
@@ -45,6 +48,7 @@ public class Skeleton extends Actor
     }
     public void death()
     {
+        // Death: if the iron sword touches this actor it is removed.
         Actor ironsword;
         ironsword = getOneObjectAtOffset(0, 0, IronSword.class);
         if (isTouching(IronSword.class) == true)
@@ -52,6 +56,18 @@ public class Skeleton extends Actor
             World world;
             world = getWorld();
             world.removeObject(this);
+        }
+    }
+    public void kill()
+    {
+        // Kill: if this actor touches the main character then character is removed
+        Actor character;
+        character = getOneObjectAtOffset(0, 0, Character.class);
+        if (isTouching(Character.class) == true)
+        {
+            World world;
+            world = getWorld();
+            world.removeObject(character);
         }
     }
 }

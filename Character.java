@@ -21,6 +21,7 @@ public class Character extends Actor
     }    
     public void movement()
     {
+        // allows the arrow keys to control the movement
         if(Greenfoot.isKeyDown("up"))
         {
             setLocation(getX(), getY() - 4);
@@ -48,6 +49,8 @@ public class Character extends Actor
     }
     public void stab()
     {
+        // makes space call the ironsword actor, sets the direction which the ironsword actor then uses to sellect the image, 
+        //then adds the actor to the world in the place coresponding to the character. (this actor)
         if(Greenfoot.isKeyDown("space"))
         {
             if(direction == 1)
