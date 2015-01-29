@@ -30,5 +30,10 @@ public class Sandzone extends World
     {
         Character character = new Character();
         addObject(character, 276, 217);
+        Skeleton skeleton = new Skeleton();
+        addObject(skeleton, 95, 204);
+        character.setLocation(505, 225);
+        skeleton.setLocation(302, 197);
+        character.setLocation(512, 217);
     }
 }

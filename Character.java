@@ -54,25 +54,29 @@ public class Character extends Actor
             {
                 IronSword ironsword = new IronSword();
                 ironsword.setDirection(1);
-                getWorld().addObject(ironsword, getX() + 1, getY() + 20);
+                ironsword.imageSetter();
+                getWorld().addObject(ironsword, getX() + 1, getY() - 20);
             }
             else if(direction == 2)
             {
                 IronSword ironsword = new IronSword();
                 ironsword.setDirection(2);
-                getWorld().addObject(ironsword, getX() + 1, getY() + 20);
+                ironsword.imageSetter();
+                getWorld().addObject(ironsword, getX() + 15, getY() + 9);
             }
             else if(direction == 3)
             {
                 IronSword ironsword = new IronSword();
                 ironsword.setDirection(3);
-                getWorld().addObject(ironsword, getX() + 1, getY() + 20);
+                ironsword.imageSetter();
+                getWorld().addObject(ironsword, getX(), getY() + 20);
             }
             else if(direction == 4)
             {
                 IronSword ironsword = new IronSword();
                 ironsword.setDirection(4);
-                getWorld().addObject(ironsword, getX() + 1, getY() + 20);
+                ironsword.imageSetter();
+                getWorld().addObject(ironsword, getX() -15, getY() + 9);
             }
         }
     }
