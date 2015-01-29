@@ -18,7 +18,6 @@ public class Skeleton extends Actor
         // Add your action code here.
         randomMovement();
         death();
-        //kill();
         //kill will give an error when death occurs
     }    
     public void randomMovement()
@@ -56,18 +55,6 @@ public class Skeleton extends Actor
             World world;
             world = getWorld();
             world.removeObject(this);
-        }
-    }
-    public void kill()
-    {
-        // Kill: if this actor touches the main character then character is removed
-        Actor character;
-        character = getOneObjectAtOffset(0, 0, Character.class);
-        if (isTouching(Character.class) == true)
-        {
-            World world;
-            world = getWorld();
-            world.removeObject(character);
         }
     }
 }

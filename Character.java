@@ -18,6 +18,7 @@ public class Character extends Actor
         // Add your action code here.
         movement();
         stab();
+        kill();
     }    
     public void movement()
     {
@@ -81,6 +82,18 @@ public class Character extends Actor
                 ironsword.imageSetter();
                 getWorld().addObject(ironsword, getX() -15, getY() + 9);
             }
+        }
+    }
+    public void kill()
+    {
+        // Kill: if this actor touches the main character then character is removed
+        Actor skeleton;
+        skeleton = getOneObjectAtOffset(0, 0, Skeleton.class);
+        if (isTouching(Skeleton.class) == true)
+        {
+            World world;
+            world = getWorld();
+            world.removeObject(this);
         }
     }
 }

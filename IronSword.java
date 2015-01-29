@@ -18,7 +18,7 @@ public class IronSword extends Actor
     {
         // Add your action code here.
         imageSetter();
-        //the if statement following this comment removes the iron sword after 2 refreshes
+        //the if statement following this comment removes the iron sword after 2 runs of act
         if(pause>0)
         {
            pause--;
@@ -53,4 +53,5 @@ public class IronSword extends Actor
         //allows the direction to be set in character class
         direction = d;
     }
+    
 }
