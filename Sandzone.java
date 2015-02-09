@@ -17,10 +17,9 @@ public class Sandzone extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-        
+
         prepare();
     }
-    
 
     /**
      * Prepare the world for the start of the program. That is: create the initial
@@ -190,4 +189,19 @@ public class Sandzone extends World
         Skeleton skeleton75 = new Skeleton();
         addObject(skeleton75, 453, 64);
     }
-}
+
+   /* public void nextScreen()
+    {
+
+        Actor ;
+
+        if(character.getY() >= 10) 
+        {
+           
+
+            Room2 go = new Room2();
+            Greenfoot.setWorld(go);
+        }*/
+    }
+
+

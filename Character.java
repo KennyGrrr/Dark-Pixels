@@ -19,6 +19,7 @@ public class Character extends Actor
         movement();
         stab();
         kill();
+      
     }    
     public void movement()
     {
@@ -96,4 +97,6 @@ public class Character extends Actor
             world.removeObject(this);
         }
     }
+    
+    
 }

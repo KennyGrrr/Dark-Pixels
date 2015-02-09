@@ -1,5 +1,5 @@
 import greenfoot.*;
-
+import java.util.*;
 /**
  * Write a description of class SkeletonKing here.
  * 
@@ -8,42 +8,33 @@ import greenfoot.*;
  */
 public class SkeletonKing extends Actor
 {
+    
     /**
      * Act - do whatever the SkeletonKing wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-public void act() 
+    public void act() 
     {
         // Add your action code here.
-        randomMovement();
+        fightPlayer();
         death();
         //kill will give an error when death occurs
     }    
-    public void randomMovement()
+
+    public void fightPlayer()
     {
-        //Poorly executed random movement function
-        int i = 0;
-        if( Greenfoot.getRandomNumber(50) == 0)
-        {
-            //up
-            setLocation(getX(), getY() - 10);
-        }
-        if( Greenfoot.getRandomNumber(50) == 1)
-        {
-            //right
-            setLocation(getX() + 20, getY());
-        }
-        if(Greenfoot.getRandomNumber(50) == 2)
-        {
-            //down
-            setLocation(getX(), getY() + 10);
-        }
-        if(Greenfoot.getRandomNumber(50) == 3)
-        {
-            // left
-            setLocation(getX() - 10, getY());
+      int heroX, heroY;
+      List<Character> hero = getObjectsInRange(200, Character.class);
+      if(hero.size()!= 0)
+      { 
+          heroX = hero.get(0).getX();
+          heroY = hero.get(0).getY();
+          turnTowards(hero.get(0).getX(), hero.get(0).getY());  
+          //getImage().rotate(0);
+          move(1);
         }
     }
+
     public void death()
     {
         // Death: if the iron sword touches this actor it is removed.
